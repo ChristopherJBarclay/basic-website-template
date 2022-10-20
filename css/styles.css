@@ -1,0 +1,208 @@
+/* color scheme:
+
+light & dark
+off-white bg: #fff
+dark text: #222
+light text: #6c757d
+
+purple colors
+flat lighter purple: #6e4f89
+vibrant dark purple: #6315a8
+*/
+
+
+/* BODY */
+body, html {
+    margin: 0; /* turn off default margins */
+    padding: 0; /* turn off default padding */
+
+    /* turn off default positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* default font and color settings */
+    background-color: #fff; /* default bg color */
+    font-family: Montserrat, arial;
+    color: #222; /* default font color */
+}
+
+
+/* HEADER */
+#header {
+    /* place header in a fixed position */
+    position: fixed; 
+    width: 100%;
+    height: 80px;
+
+    /* dad code:
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%; */
+
+    /* flex container css */
+    display: inline-flex; /* header is a flex container, with children inline */
+    flex-direction: row;
+    justify-content: space-between; /* put nameplate and navbar on opposite sides of screen */
+    align-items: center; /* centers child items horizontally  */
+
+    /* header background color */
+    background-image: linear-gradient(to bottom right, #fff, #6c757d);
+}
+    /* Nameplate Area - HEADER */
+        #header-nameplate {
+            display: inline-flex; /* flex container within a flex container */
+            align-items: center;
+            padding-left: 5%;
+            font-family: Raleway, sarif;
+        }
+            #header-my-logo {
+                padding: 5px;
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+            #header-name-title {
+                flex-direction: column;
+                padding: 5px;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            #header-my-name {
+                padding: 5px;
+            }
+            #header-my-title {
+                padding: 5px;
+            }   
+
+    /* NavBar - HEADER */
+        #navbar {
+            display: flex; /* flex container */
+            flex-direction: column;
+            column-gap: 10px;
+            align-items: center; /* horizontally center the two blocks (nav and icons) */
+            padding-right: 5%;
+        }
+            #nav-items ul {
+                display: inline-flex; /* flex container */
+                list-style: none;
+            }
+                #nav-items a {
+                    text-decoration: none;
+                    color: #222;
+                }
+                .nav-btn {
+                    padding: 5px;
+                }
+            #nav-socials ul {
+                display: inline-flex; /* flex container */
+                list-style: none;
+            }
+                #nav-socials a {
+                    text-decoration: none;
+                    color: #222;
+                }
+                .social-btn {
+                    padding: 5px;
+                }
+
+
+/* OVERALL PAGE (not the header) */
+    #page {
+        display: block;
+        margin: auto; /* centers entire page */
+        width: 60%; /* forces page to use the middle 60% of screen */
+
+        padding-top: 200px; /* Give room for top of page section to breathe beneath fixed header */
+    }
+
+
+/* HOME (top paragraph) */
+    #about {
+        display: block;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+        #about-intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+            #intro-pic {
+                /* my picture */
+                display: flex;
+                order: 1;
+                
+                height: 200px;
+                width: auto;
+                border-radius: 50%;
+            }
+            #intro-nameplate {
+                /* the overall div with my {name, title, location} in intro */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                order: 2;
+                padding-left: 50px;
+            }
+            #intro-name { 
+                /* my name in the intro */
+                display: block;
+
+                font-family: 'Saira Extra Condensed', sans-serif;
+                color: #222;
+                font-size: 5.5em;
+            }
+            #intro-title-place {
+                /* my title and location in the intro */
+                display: block;
+                font-size: 1.5em;
+            }
+        #about-para {
+            /* intro paragraphs */
+            display: block;
+        }
+            #intro-para p {
+                /* each separate paragraph in the intro */
+            }
+        #about-skills {
+
+        }
+            #skills-list {
+
+            }
+                #skill {
+
+                }
+        #about-visits {
+
+        }
+
+
+/* EXPERIENCE / RESUME */
+    #experience {} 
+
+/* PROJECTS / DEMOS */
+    #projects {}
+
+/* BLOG */
+    #blog {}
+
+/* CONTACT ME */
+    #contact {}
+
+/* FOOTER */
+    #footer {
+        background-image: linear-gradient(to bottom right, #6c757d, #fff);
+        
+        display: inline-flex;
+        height: 80px;
+        width: 100%;
+    }
+        #copyright {
+            margin: auto;
+        }
